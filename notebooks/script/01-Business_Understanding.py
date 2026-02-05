@@ -24,10 +24,10 @@
 # The objective of this project is to develop a machine learning model that classifies breast cancer cases as malignant or benign using numerical features extracted from digitized FNA images. Because FNA-based diagnosis requires considering many correlated features and can involve subjective judgement, a data-driven model can support more consistent and measurable decision-making. The scope is limited to classical machine learning methods on the provided dataset.
 
 # ### Business Success Criteria
-# - A model can classify each case as **malignant** or **benign** using the provided FNA-derived features.
-# - The results are reported transparently, including a **confusion matrix** and key metrics, so **false negatives and false positives** are explicitly visible.
-# - A clear, measurable performance target is defined and met, with emphasis on **detecting malignant cases** (e.g., high recall for the malignant class), while still maintaining reasonable overall performance.
-# - The full workflow is **reproducible** in a single Jupyter notebook, with documented assumptions, decisions, and results.
+# - A model can classify each case as malignant or benign using the provided FNA-derived features.
+# - The results are reported transparently, including a confusion matrix and key metrics, so false negatives and false positives are explicitly visible.
+# - A clear, measurable performance target is defined and met, with emphasis on detecting malignant cases (e.g., high recall for the malignant class), while still maintaining reasonable overall performance.
+# - The full workflow is reproducible in a single Jupyter notebook, with documented assumptions, decisions, and results.
 
 # ### Assessing the situation:
 # #### Resource Inventory
