@@ -1,0 +1,24 @@
+name: breast_cancer
+channels:
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pip
+  - typer
+  - loguru
+  - tqdm
+  - ipython
+  - jupyterlab
+  - matplotlib
+  - notebook
+  - numpy
+  - pandas
+  - scikit-learn
+  - pre-commit
+  - nbstripout
+  - nbautoexport
+  - ruff
+  - pip:
+    - python-dotenv
+    - mkdocs
+    - -e .
