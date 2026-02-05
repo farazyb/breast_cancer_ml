@@ -10,7 +10,13 @@
 # [1] Street, W. N., Wolberg, W. H., & Mangasarian, O. L. (1993). Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE International Symposium on Electronic Imaging: Science and Technology. Retrieved from https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+(Diagnostic)
 
 # ## Business Understanding
-# ### Problem
-# * Diagnosis of breast tumors is traditionally done with a complete biopsy, which is invasive.
-# * FNA (fine needle aspiration) is less invasive, but diagnosis is not always successful and remains highly dependent on the skill and experience of the physician, meaning it is a subjective process.
-# * So the main question: how to make FNA diagnosis faster, more accurate, and more objective so that it is less dependent on individual judgment.
+
+# ### Context and Problem Statement
+# 
+# Breast cancer diagnosis can be supported by data extracted from digitized images of Fine Needle Aspirate (FNA) samples. The provided dataset contains numerical features that describe characteristics of cell nuclei, such as radius, texture, and smoothness, together with a label indicating whether the case is malignant or benign.
+# 
+# The problem in this assignment is a supervised machine learning task: given a vector of extracted nucleus features for each case, build a model that classifies the case as malignant or benign. The objective is to produce a measurable and reproducible classification approach using the provided features, documented in a Jupyter notebook.
+# 
+
+# ### Business Objectives
+# The objective of this project is to develop a machine learning model that classifies breast cancer cases as malignant or benign using numerical features extracted from digitized FNA images. Because FNA-based diagnosis requires considering many correlated features and can involve subjective judgement, a data-driven model can support more consistent and measurable decision-making. The scope is limited to classical machine learning methods on the provided dataset.
