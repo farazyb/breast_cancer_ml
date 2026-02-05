@@ -91,16 +91,54 @@
 # ### Determining Data Mining Goals
 # #### Data Mining Goals
 # - Build a binary classification model that predicts the label (malignant vs benign) from the provided numerical nucleus features.
-# ### Data Mining Problem Type
+# #### Data Mining Problem Type
 # This is a supervised binary classification problem:
 # - Input: numerical features extracted from digitized FNA images of a breast mass (nucleus measurements).
 # - Output: a predicted class label: malignant or benign (optionally with a probability/score).
-# ### Technical Data Mining Goals
-# The technical solution should:
+# #### Data Mining Success Criteria
+# To translate the business goal of "reliable diagnosis" into technical terms, the model must meet specific performance benchmarks derived from the domain and the original study by Street et al.:
 # 
-# 1. Build a classifier that predicts malignant vs benign for 100% of cases in the dataset (each record receives a label).
-# 2. Produce a prediction score (probability or decision score) for each case so that the decision boundary can be adjusted if needed.
-# 3. Support stable generalization by using a validation strategy that estimates performance on unseen data (e.g., stratified k-fold cross-validation).
-# 4. Enable interpretability at feature level by reporting which features contribute most to the classification (model coefficients or feature importance).
+# 1.  Coverage:
+#     * Produce a valid prediction score for 100% of the cases in the test set.
+# 
+# 2.  Accuracy (Benchmark):
+#     * Achieve a classification accuracy comparable to the state-of-the-art benchmark of 97% established by Street et al. (1993) on this dataset.
+# 
+# 3.  Sensitivity (Recall):
+#     * Primary Metric: Maximize Recall for the Malignant class.
+#     * Target: Achieve a Recall of > 0.95, ensuring that fewer than 5% of actual cancer cases are missed (minimizing False Negatives).
+# 
+# 4.  Parsimony & Interpretability:
+#     * Identify the minimal subset of features required to maintain high performance. Medical practitioners prefer simpler rules over complex "black box" models.
 # 
 # 
+
+# ### Produce Project Plan
+# 
+# ### Project Timeline
+# This project follows the FDS module timeline (5 weeks), structured around the CRISP-DM phases:
+# 
+# * Phase 1: Understanding (Weeks 3.1 - 3.3)
+#     * Define business and data mining goals (Current Phase).
+#     * Perform Exploratory Data Analysis (EDA) to understand feature distributions.
+#     * Identify data quality issues (missing values, outliers).
+# 
+# * Phase 2: Preparation (Week 3.3)
+#     * Clean data and handle any irregularities.
+#     * Perform feature engineering or selection (aiming for the "parsimony" goal).
+#     * Split data into Train/Test sets using Stratified Sampling.
+# 
+# * Phase 3: Modeling & Evaluation (Weeks 3.3 - 3.5)
+#     * Train candidate models (Logistic Regression, SVM, Random Forest).
+#     * Evaluate using Cross-Validation (k-fold).
+#     * Compare performance against the success criteria (Recall > 0.95, Accuracy ~97%).
+# 
+# * Final Deadline: March 9, 2025 (Hand-in summative deliverable).
+# 
+# #### Assessment of Tools & Techniques
+# * Environment: Python 3.x , Anaconda(Jupyter Notebook).
+# * Key Libraries:
+#     * `pandas` & `numpy` for data manipulation.
+#     * `matplotlib` & `seaborn` for visualization.
+#     * `scikit-learn` for modeling and evaluation metrics.
+# * Technique Constraints: Deep Learning (Neural Networks) is explicitly excluded from the scope of this assignment.
