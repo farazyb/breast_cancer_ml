@@ -82,6 +82,9 @@
 # | Feature scaling | Standardizing feature ranges (e.g., z-score) | Some models (SVM, kNN) can fail without it |
 # | Feature selection | Choosing a subset of features | Can reduce complexity and improve stability |
 # | Baseline model | A simple reference model to compare against | Prevents claiming improvement without a benchmark |
+# | mean  | Average value of a feature across all measured cell nuclei in a sample | For each feature (e.g., radius), calculate the mean over all nuclei measurements <br> Captures the overall/typical characteristics of the tumor cells. Good baseline signal for many models                               |
+# | worst | “Most extreme” value of a feature in a sample (not just a simple max)  | Typically the mean of the largest values (often top ~3 nuclei) for that feature <br> Highlights abnormal extremes. Malignancy often shows up in the most irregular / largest nuclei even if the average looks normal |
+# | error | Variation (spread) of a feature within a sample, not measurement error | Usually the standard deviation of that feature across nuclei in the same sample <br> Measures heterogeneity inside the tumor. Malignant tumors are often less uniform, so higher variation can be informative        |
 # 
 # 
 # #### Cost/Benefit Analysis

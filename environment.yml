@@ -18,6 +18,8 @@ dependencies:
   - nbstripout
   - nbautoexport
   - ruff
+  - requests
+  - seaborn 
   - pip:
     - python-dotenv
     - mkdocs

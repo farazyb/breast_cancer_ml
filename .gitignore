@@ -89,6 +89,7 @@ target/
 
 # Jupyter Notebook
 .ipynb_checkpoints
+notebooks/_scratch/
 
 # IPython
 profile_default/
@@ -189,3 +190,4 @@ cython_debug/
 
 # PyPI configuration file
 .pypirc
+.claude
